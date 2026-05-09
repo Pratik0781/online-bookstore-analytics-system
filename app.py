@@ -67,7 +67,7 @@ def search():
     result = None
 
     if request.method == 'POST':
-        keyword = request.form['keyword']
+        keyword = request.form.get('keyword')
 
         query = f"SELECT * FROM books WHERE Title LIKE '%{keyword}%' OR Author LIKE '%{keyword}%'"
 
@@ -104,4 +104,4 @@ def analytics():
     )
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=10000)
