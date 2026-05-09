@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark p-3">
+    <div class="container-fluid">
+        <a class="navbar-brand">Book Store Analytics</a>
+    </div>
+</nav>
+
+<div class="container mt-5">
+
+<h1 class="text-center">Dashboard Analytics</h1>
+<p class="text-center text-muted">
+Analyze bookstore sales, customers, and revenue insights
+</p>
+
+<div class="row mt-5">
+
+<div class="col-md-3">
+<div class="card p-3 text-center shadow">
+<h3>Total Books</h3>
+<h2>{{ total_books }}</h2>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card p-3 text-center shadow">
+<h3>Total Customers</h3>
+<h2>{{ total_customers }}</h2>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card p-3 text-center shadow">
+<h3>Total Orders</h3>
+<h2>{{ total_orders }}</h2>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card p-3 text-center shadow">
+<h3>Total Revenue</h3>
+<h2>₹{{ total_revenue }}</h2>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+<footer class="bg-dark text-white text-center p-3 mt-5">
+    Developed by Pratik Shere
+</footer>
+</html>

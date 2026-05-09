@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Analytics</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark p-3">
+    <div class="container-fluid">
+        <a class="navbar-brand">Book Store Analytics</a>
+    </div>
+</nav>
+
+<div class="container mt-5">
+
+<h1>Analytics Dashboard</h1>
+
+<h3 class="mt-4">Top Selling Books</h3>
+{{ top_books|safe }}
+
+<h3 class="mt-5">Most Active Customers</h3>
+{{ active_customers|safe }}
+
+</div>
+
+</body>
+
+</html>
